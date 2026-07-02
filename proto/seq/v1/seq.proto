@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package hi.im.seq.v1;
+
+option go_package = "github.com/sunchao1/hi-im-api/gen/go/seq/v1;seqv1";
+
+service SeqService {
+  rpc AllocSid(AllocSidRequest) returns (AllocSidResponse);
+  rpc AllocRid(AllocRidRequest) returns (AllocRidResponse);
+  rpc AllocGid(AllocGidRequest) returns (AllocGidResponse);
+  rpc AllocSeq(AllocSeqRequest) returns (AllocSeqResponse);
+}
+
+message AllocSidRequest {}
+
+message AllocSidResponse {
+  int64 sid = 1;
+}
+
+message AllocRidRequest {}
+
+message AllocRidResponse {
+  int64 rid = 1;
+}
+
+message AllocGidRequest {}
+
+message AllocGidResponse {
+  int64 gid = 1;
+}
+
+message AllocSeqRequest {
+  int64 sid = 1;
+}
+
+message AllocSeqResponse {
+  int64 seq = 1;
+}

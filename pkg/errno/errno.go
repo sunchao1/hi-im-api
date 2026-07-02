@@ -1,0 +1,45 @@
+package errno
+
+const (
+	OK = 0
+)
+
+// System-level error codes (ERR_SYS_*).
+const (
+	ERR_SYS_SYSTEM                    = 10001
+	ERR_SYS_SVC_UNAVAILABLE           = 10002
+	ERR_SYS_REMOTE_SERVICE            = 10003
+	ERR_SYS_IP_LIMIT                  = 10004
+	ERR_SYS_PERM_DENIED               = 10005
+	ERR_SYS_MISS_PARAM                = 10006
+	ERR_SYS_UNSUPPORT                 = 10007
+	ERR_SYS_TOO_BUSY                  = 10009
+	ERR_SYS_JOB_EXIRED                = 10010
+	ERR_SYS_RPC                       = 10011
+	ERR_SYS_ILLEGAL_REQUEST           = 10012
+	ERR_SYS_INVALID_USER              = 10013
+	ERR_SYS_INVALID_PARAM             = 10017
+	ERR_SYS_BODY_OVER_LIMIT           = 10018
+	ERR_SYS_REQ_API_NOT_FOUND         = 10020
+	ERR_SYS_HTTP_NOT_SUPPORT          = 10021
+	ERR_SYS_IP_REQ_OUT_OF_RATE_LIMIT  = 10022
+	ERR_SYS_USR_REQ_OUT_OF_RATE_LIMIT = 10023
+	ERR_SYS_DB                        = 10024
+)
+
+// Service-level error codes (ERR_SVR_*).
+const (
+	ERR_SVR_ONLINE_REQ     = 20001
+	ERR_SVR_OFFLINE_REQ    = 20002
+	ERR_SVR_JOIN_REQ       = 20003
+	ERR_SVR_UNJOIN_REQ     = 20004
+	ERR_SVR_PARSE_PARAM    = 20005
+	ERR_SVR_MISS_PARAM     = 20006
+	ERR_SVR_INVALID_PARAM  = 20007
+	ERR_SVR_AUTH_FAIL      = 20008
+	ERR_SVR_DATA_COLLISION = 20009
+	ERR_SVR_HEAD_INVALID   = 20010
+	ERR_SVR_BODY_INVALID   = 20011
+	ERR_SVR_CHECK_FAIL     = 20012
+	ERR_SVR_SEQ_EXHAUSTION = 20013
+)

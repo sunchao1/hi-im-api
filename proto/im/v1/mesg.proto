@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package hi.im.v1;
+
+option go_package = "github.com/sunchao1/hi-im-api/gen/go/im/v1;imv1";
+
+// CMD 0x0101 — ONLINE request.
+message Online {
+  uint64 uid = 1;
+  uint64 sid = 2;
+  string token = 3;
+  string app = 4;
+  string version = 5;
+  uint32 terminal = 6;
+}
+
+// CMD 0x0102 — ONLINE-ACK.
+message OnlineAck {
+  uint64 uid = 1;
+  uint64 sid = 2;
+  uint64 seq = 3;
+  string app = 4;
+  string version = 5;
+  uint32 terminal = 6;
+  uint32 code = 7;
+  string errmsg = 8;
+}
+
+// CMD 0x0305 — GROUP-JOIN.
+message GroupJoin {
+  uint64 uid = 1;
+  uint64 gid = 2;
+}
+
+// CMD 0x0306 — GROUP-JOIN-ACK.
+message GroupJoinAck {
+  uint32 code = 1;
+  string errmsg = 2;
+}
+
+// CMD 0x030B — GROUP-CHAT.
+message GroupChat {
+  uint64 uid = 1;
+  uint64 gid = 2;
+  uint32 level = 3;
+  uint64 time = 4;
+  string text = 5;
+  bytes data = 6;
+}
+
+// CMD 0x030C — GROUP-CHAT-ACK.
+message GroupChatAck {
+  uint32 code = 1;
+  string errmsg = 2;
+}
+
+// CMD 0x0405 — ROOM-JOIN.
+message RoomJoin {
+  uint64 uid = 1;
+  uint64 rid = 2;
+}
+
+// CMD 0x0406 — ROOM-JOIN-ACK.
+message RoomJoinAck {
+  uint64 uid = 1;
+  uint64 rid = 2;
+  uint32 gid = 3;
+  uint32 code = 4;
+  string errmsg = 5;
+}
+
+// CMD 0x040B — ROOM-CHAT.
+message RoomChat {
+  uint64 uid = 1;
+  uint64 rid = 2;
+  uint32 gid = 3;
+  uint32 level = 4;
+  uint64 time = 5;
+  string text = 6;
+  bytes data = 7;
+}
+
+// CMD 0x040C — ROOM-CHAT-ACK.
+message RoomChatAck {
+  uint64 uid = 1;
+  uint64 rid = 2;
+  uint32 gid = 3;
+  uint32 code = 4;
+  string errmsg = 5;
+}

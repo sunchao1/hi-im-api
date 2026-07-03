@@ -13,7 +13,9 @@ const (
 	CMD_PONG       = 0x0106
 
 	// 0x03xx group chat
-	CMD_GROUP_JOIN     = 0x0305 // join group; ACK: CMD_GROUP_JOIN_ACK
+	CMD_GROUP_CREAT     = 0x0301 // create group; ACK: CMD_GROUP_CREAT_ACK
+	CMD_GROUP_CREAT_ACK = 0x0302
+	CMD_GROUP_JOIN      = 0x0305 // join group; ACK: CMD_GROUP_JOIN_ACK
 	CMD_GROUP_JOIN_ACK = 0x0306
 	CMD_GROUP_CHAT     = 0x030B // group message; ACK: CMD_GROUP_CHAT_ACK
 	CMD_GROUP_CHAT_ACK = 0x030C
